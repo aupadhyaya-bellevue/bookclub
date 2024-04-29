@@ -2,15 +2,12 @@
     Liang, Y.D. (2019). Introduction to Java Programming and Data Structures:
         Comprehensive Version (12th ed.). Pearson Education, Inc.
     Modified by Upadhyaya, A. (2024). CIS530-T301 Server-Side Development
+    Assignment 3.2 - Controller Aspects and Navigation
  */
-package com.bookclub.service;
+package com.bookclub.service.dao;
 
-import java.util.List;
+import com.bookclub.model.Book;
+import com.bookclub.service.GenericDao;
 
-public interface GenericCrudDao<E, K> {
-    void add(E entity);
-    void update(E entity);
-    boolean remove(E entity);
-    List<E> list();
-    E find(K key);
+public interface BookDao extends GenericDao<Book, String> {
 }
