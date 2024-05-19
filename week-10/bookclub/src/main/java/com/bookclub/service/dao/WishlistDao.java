@@ -4,11 +4,11 @@
     Modified by Upadhyaya, A. (2024). CIS530-T301 Server-Side Development
     Assignment 3.2 - Controller Aspects and Navigation
  */
-package com.bookclub.service;
+package com.bookclub.service.dao;
 
-import java.util.List;
+import com.bookclub.model.WishlistItem;
+import com.bookclub.service.GenericCrudDao;
+import com.bookclub.service.GenericDao;
 
-public interface GenericDao<E, K> {
-    List<E> list(K key);
-    E find(K key);
+public interface WishlistDao extends GenericCrudDao<WishlistItem, String> {
 }
